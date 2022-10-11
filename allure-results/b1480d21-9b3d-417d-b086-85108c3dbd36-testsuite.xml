@@ -1,0 +1,83 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1665347103905' stop='1665347130823'>
+    <name>Ebay Product Search</name>
+    <title>Ebay Product Search</title>
+    <test-cases>
+        <test-case start='1665347103906' status='passed' stop='1665347109291'>
+            <name>should open the main url and verify the title</name>
+            <title>should open the main url and verify the title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='1-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-105.0'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1665347109358' status='failed' stop='1665347128419'>
+            <name>should search for the product and verify the search field value</name>
+            <title>should search for the product and verify the search field value</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='1-0'/>
+                <label name='severity' value='Critical'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-105.0'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='1730b92e-d8af-45f5-89e0-a56690bb0a02-attachment.png' type='image/png' size='847649'/>
+            </attachments>
+            <failure>
+                <message>Expect $(`#gh-ac`) to have property value
+                
+                Expected: "test"
+                Received: "laptop"</message>
+                <stack-trace>Error: Expect $(`#gh-ac`) to have property value
+                
+                Expected: "test"
+                Received: "laptop"
+                    at Context.&lt;anonymous> (/home/juliko/projects/automation-bro/test/specs/search.js:16:42)
+                    at processTicksAndRejections (node:internal/process/task_queues:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1665347128426' status='passed' stop='1665347129554'>
+            <name>should redirect to a new page and verify the title</name>
+            <title>should redirect to a new page and verify the title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='1-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-105.0'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='4c6d6da8-5701-458e-882d-68e78565b0ad-attachment.png' type='image/png' size='462546'/>
+            </attachments>
+        </test-case>
+        <test-case start='1665347129587' status='passed' stop='1665347130821'>
+            <name>should update the search category</name>
+            <title>should update the search category</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='1-0'/>
+                <label name='feature' value='search category update'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-105.0'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0ea21582-fdca-4ae5-bf33-72fd9e7dba27-attachment.png' type='image/png' size='483936'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Ebay Product Search" timestamp="2022-10-10T00:00:50" time="15.97" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Ebay Product Search"/>
+      <property name="capabilities" value="chrome.106_0_5249_91.linux"/>
+      <property name="file" value="./test/specs/search.js"/>
+    </properties>
+    <testcase classname="chrome.106_0_5249_91.linux.Ebay_Product_Search" name="should open the main url and verify the title" time="2.599">
+      <system-out><![CDATA[
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/window/maximize - {}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/url - {"url":"https://www.ebay.com/"}
+RESULT: {}
+RESULT: {"url":"https://www.ebay.com/"}
+COMMAND: GET /session/5413cf288911e093404a8e7bca837178/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.106_0_5249_91.linux.Ebay_Product_Search" name="should search for the product and verify the search field value" time="10.411">
+      <system-out><![CDATA[
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/window/maximize - {}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/element - {"using":"css selector","value":"#gh-ac"}
+RESULT: {"using":"css selector","value":"#gh-ac"}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/element/62be8e15-9737-4b1b-8b67-4d1d52d0d18e/value - {"text":"laptop"}
+RESULT: {}
+RESULT: {"text":"laptop"}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/element - {"using":"css selector","value":"#gh-btn"}
+RESULT: {"using":"css selector","value":"#gh-btn"}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/element/29ffee80-2002-423d-827d-a6c610e78658/click - {}
+RESULT: {}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/element - {"using":"css selector","value":"#gh-ac"}
+RESULT: {"using":"css selector","value":"#gh-ac"}
+COMMAND: GET /session/5413cf288911e093404a8e7bca837178/element/09307302-ce46-448b-b917-3cfcee5f5a87/property/value - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.106_0_5249_91.linux.Ebay_Product_Search" name="should redirect to a new page and verify the title" time="0.08">
+      <system-out><![CDATA[
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/window/maximize - {}
+COMMAND: GET /session/5413cf288911e093404a8e7bca837178/title - {}
+RESULT: {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.106_0_5249_91.linux.Ebay_Product_Search" name="should update the search category" time="2.845">
+      <system-out><![CDATA[
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/window/maximize - {}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: POST /session/5413cf288911e093404a8e7bca837178/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: GET /session/5413cf288911e093404a8e7bca837178/element/9288a195-447b-40ef-97c3-f9f4ac6fdf3a/text - {}
+RESULT: {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: GET /session/5413cf288911e093404a8e7bca837178/element/9288a195-447b-40ef-97c3-f9f4ac6fdf3a/text - {}
+RESULT: {}
+RESULT: {}
+COMMAND: DELETE /session/5413cf288911e093404a8e7bca837178 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
