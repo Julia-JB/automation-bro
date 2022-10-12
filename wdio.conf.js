@@ -168,7 +168,7 @@ exports.config = {
     [
       "junit",
       {
-        outputDir: "./report",
+        outputDir: "./",
       },
     ],
   ],
